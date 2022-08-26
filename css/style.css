@@ -18,17 +18,13 @@ body {
 
 /* cores usadas no site */
 :root {
-    --roxo-claro: #7f3cec;
-    --roxo-escuro: #4e17a7;
-    --laranja: #f3924c;
-    --laranja-escuro: #FF6F06;
-    --padding-sections: 10px 1%;
-    --cinza-claro: #F8F8F8;
+    --azul-escuro: #002074;
 }
 
 /* divs que serão mais usadas */
 .container {
     width: 95%;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
@@ -153,6 +149,102 @@ header > .container {
 
 .header2 ul.nav-links li a:hover {
     opacity: .7;
+}
+
+/*------------------------------------------ slider de imagens --------------------------------------------- */
+
+/* container que irá conter as imagens */
+section.slider-imagens {
+    position: relative;
+    width: 100%;
+}
+
+/* slide geral que contém as imagens */
+.slide {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+
+	width: 1280px;
+	height: 400px;
+	overflow: hidden;
+	border-radius: 15px;
+	transition: all .4s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.slides {
+	width: 6000px; /* é necessário um tamanho maior do que a div pai para que as imagens fiquem uma do lado da outra */
+	display: flex;
+}
+
+/* define o tamanho da imagem */
+.image img {
+	width: 1280px;
+	height: 400px;
+}
+
+#atual {
+	transition: all .6s;
+}
+
+/* pega os botões de passar e voltar */
+.btn {
+	position: absolute;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all .4s;
+	font-size: 32px;
+	margin-top: -10px;
+}
+
+.btn:hover {
+	transform: scale(1.5);
+}
+
+#voltar {
+	top: 50%;
+	left: 1%;
+}
+
+#next {
+	top: 50%;
+	right: 1%;
+}
+
+.balls {
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+	width: 1024px;
+	display: flex;
+	justify-content: center;
+	margin-top: -45px;
+}
+
+/* faz as bolinhas que marcam em qual imagem estamos */
+.balls div {
+	transition: all .5s;
+	border: 3px solid white;
+	padding: 6px;
+	border-radius: 50%;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.balls div:hover {
+	background-color: white;
+}
+
+.imgAtual {
+	transition: all .5s;
+	background-color: white;
 }
 
 
