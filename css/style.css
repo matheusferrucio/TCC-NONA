@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--cinza-claro);
+}
+
+/* cores usadas no site */
+:root {
+    --roxo-claro: #7f3cec;
+    --roxo-escuro: #4e17a7;
+    --laranja: #f3924c;
+    --laranja-escuro: #FF6F06;
+    --padding-sections: 10px 1%;
+    --cinza-claro: #F8F8F8;
+}
+
+/* divs que serão mais usadas */
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.centraliza {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*****/
+
+/* formatação do header */
+header {
+    width: 100%;
+    height: 150px;
+    background-color: #002074;
+    display: flex;
+    align-items: center;
+}
+
+header > .container {
+    height: 100%;
+    display: flex;
+}   
+
+/*------------------------------------------ header --------------------------------------------- */
+.container .container-logo {
+    width: 200px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* logo do site */
+.container .container-logo .logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: silver;
+}
+
+.header-content {
+    width: 100%;
+    height: 100%;
+}
+
+/*------------------------------------------ header 1 --------------------------------------------- */
+.header1 {
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+
+.header1 .buscar {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* input de busar produto */
+.header1 .buscar input[type=text] {
+    width: 75%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 1000px;
+}
+
+/* formata os ícones do header */
+.header1 .botoes-menu {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+.header1 .botoes-menu i:not(:last-child) {
+    margin-right: 15px;
+}
+
+/* faz o botão hamburguer desaparecer */
+.header1 .botoes-menu i:last-child {
+    display: none;
+}
+
+/*------------------------------------------ header 2 --------------------------------------------- */
+.header2 {
+    width: 100%;
+    height: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header2 ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.header2 ul.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
+    transition: all .5s ease;
+}
+
+.header2 ul.nav-links li a:hover {
+    opacity: .7;
+}
+
+
+/*------------------------------------------ responsivo do header --------------------------------------------- */
+@media screen and (max-width: 900px){
+    header {
+        height: 100px;
+    }
+    
+    .header1 .botoes-menu i {
+        display: none;
+    }
+
+    .header1 .botoes-menu i:last-child {
+        display: block;
+    }
+
+
+    .container .container-logo .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .header1 {
+        height: 100%;
+    }
+
+    .header2 {
+        display: none;
+        pointer-events: none;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    /* div que contêm a logo */
+    .container .container-logo {
+        width: auto;
+    }
+
+    /* logo do site */
+    .container .container-logo .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* div que contêm o input de busca */
+    .header1 .buscar {
+        width: 85%;
+    }
+
+    /* input de buscar produto */
+    .header1 .buscar input[type=text] {
+        width: 85%;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    /* div que contêm os ícones do header */
+    .header1 .botoes-menu {
+        width: 15%;
+    }
+
+    /* faz o botão hamburguer aparecer */
+    .header1 .botoes-menu i:last-child {
+        font-size: 28px;
+    }
+}

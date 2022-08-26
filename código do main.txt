@@ -1,0 +1,65 @@
+<!-- CONTEÚDO PRINCIPAL DO SITE -->
+        <main>
+           <section class="produtos">
+                <div class="center">
+                    <h2>Recomendações</h2>
+                    <div class="container-produtos">
+                        <?php
+                            for($i = 0; $i <= 10; $i++){
+                                echo "<a href='#'>
+                                <div class='card-produto'>
+                                    <img src='./imagens/tapete-azul.png' alt='imagem tapete azul'>
+                                    <hr>
+                                    <div class='conteudo-produto'>
+                                        <p>Teste com o tapete azul para o card do produto</p>
+                                        <div class='estrelas'>
+                                            <i class='fa-solid fa-star'></i>
+                                            <i class='fa-solid fa-star'></i>
+                                            <i class='fa-solid fa-star'></i>
+                                            <i class='fa-solid fa-star'></i>
+                                            <i class='fa-solid fa-star'></i>
+                                        </div>
+                                        <div class='preco-produto'>
+                                            <p>De: <span>R$ 190,90</span></p>
+                                            <h4>Por: R$ 150,00</h4>
+                                        </div>
+                                    </div><!--conteudo-produto-->
+                                </div><!--card-produto-->
+                                </a>";
+                            }
+                        ?>
+                        
+                    </div><!--container-produtos-->
+                </div><!--center-->
+                <div class="center">
+                    <h2>Promoções</h2>
+                    <div class="container-produtos">
+                        <?php
+                            for($i = 0; $i <= 10; $i++){
+                                echo "<a href='#'>
+                                <div class='card-produto'>
+                                    <img src='./imagens/tapete-azul.png' alt='imagem tapete azul'>
+                                    <hr>
+                                    <div class='conteudo-produto'>
+                                        <p>Teste com o tapete azul para o card do produto</p>
+                                        <div class='estrelas'>
+                                            <i class='fa-solid fa-star'></i>
+                                            <i class='fa-solid fa-star'></i>
+                                            <i class='fa-solid fa-star'></i>
+                                            <i class='fa-solid fa-star'></i>
+                                            <i class='fa-solid fa-star'></i>
+                                        </div>
+                                        <div class='preco-produto'>
+                                            <p>De: <span>R$ 190,90</span></p>
+                                            <h4>Por: R$ 150,00</h4>
+                                        </div>
+                                    </div><!--conteudo-produto-->
+                                </div><!--card-produto-->
+                                </a>";
+                            }
+                        ?>
+                        
+                    </div><!--container-produtos-->
+                </div><!--center-->
+           </section>
+        </main>
