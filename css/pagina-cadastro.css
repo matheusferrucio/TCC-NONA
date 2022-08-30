@@ -1,0 +1,167 @@
+:root {
+    --azul-escuro: #002074;
+}
+
+header {
+    height: 200px;
+}
+
+header .container .container-logo {
+    width: auto;
+    height: calc(100% - 50px);
+}
+
+body {
+    background-color: var(--cinza-claro);
+    overflow-y: scroll;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 130vh;
+}
+
+/* container que contém o formulário de cadastro */
+main section.container {
+    position: absolute;
+    /* max-width: 800px; <--- é só retirar o comentário dessa linha caso esteja muito largo o formulário */
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* container do formulário de cadastro */
+.container-cadastro {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+/* título do formulário de cadastro */
+.container-cadastro .titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    color: var(--azul-escuro);
+    margin-bottom: 20px;
+}
+
+/* div que contém o formulário de cadastro */
+.formulario-cadastro {
+    margin-top: 30px;
+}
+
+/* formatação geral das sessões onde ficarão os inputs */
+.sessao-form {
+    width: 100%;
+    /* background-color: silver; */
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+/* div que organiza os inputs e ajusta a largura, esta classe está sendo usada pra ajustar todos os inputs */
+.formata-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.sessao-form label {
+    color: rgb(60, 60, 60);
+    font-size: 20px;
+}
+.sessao-form input[type=text],
+.sessao-form input[type=email],
+.sessao-form input[type=password] {
+    border: 1px solid silver;
+    outline: none;
+    padding: 10px 8px;
+    border-radius: 10px;
+}
+
+/* sessão dos inputs de data de nascimento e cpf */
+.sessao-form .data-cpf {
+    width: 100%;
+    display: flex;
+}
+
+/* input data de nascimento */
+.sessao-form .data-cpf .data-nascimento {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.sessao-form .data-cpf .data-nascimento input[type=date] {
+    border: 1px solid silver;
+    border-radius: 10px;
+    outline: none;
+    padding: 9px 8px;
+}
+
+/* input cpf */
+.sessao-form .data-cpf .cpf {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+/* formatação da sessão de gêneros */
+.genero .titulo {
+    color: rgb(60, 60, 60);
+    font-size: 20px;
+    justify-content: flex-start;
+}
+.genero .titulo h3 {
+    font-weight: normal;
+}
+
+/* div que contém os inputs radio de gênero */
+.tipos-genero {
+    width: 100%;
+    display: flex;
+}
+
+/* alinha os inputs ao meio */
+.tipos-genero .genero-item {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tipos-genero .genero-item input[type=radio] {
+    margin-right: 10px;
+}
+
+/* formatação botão cadastrar */
+.botao-cadastrar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-cadastrar input[type=submit] {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    border: 1px solid #002074;
+    background-color: #021a57;
+
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.botao-cadastrar input[type=submit]:hover {
+    transform: scale(1.1);
+    background-color: #011955;
+}

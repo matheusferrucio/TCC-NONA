@@ -112,11 +112,20 @@ header > .container {
     font-size: 32px;
     color: white;
     cursor: pointer;
+
+    background-color: green;
 }
 
-.header1 .botoes-menu i:not(:last-child) {
+.header1 .botoes-menu a:not(:last-child) {
     margin-right: 15px;
+    color: white;
+    text-decoration: none;
 }
+
+/* 
+.header1 .botoes-menu a i:not(:last-child) {
+    margin-right: 15px;
+} */
 
 /* faz o botão hamburguer desaparecer */
 .header1 .botoes-menu i:last-child {
@@ -154,15 +163,17 @@ header > .container {
 /*------------------------------------------ slider de imagens --------------------------------------------- */
 
 /* container que irá conter as imagens */
-section.slider-imagens {
+section.slide-imagens {
     position: relative;
+    left: 0;
     width: 100%;
+    padding: 10px;
 }
 
 /* slide geral que contém as imagens */
 .slide {
-    position: absolute;
-    top: 160px;
+    position: relative;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
 
@@ -183,6 +194,7 @@ section.slider-imagens {
 .image img {
 	width: 1280px;
 	height: 400px;
+    object-fit: cover;
 }
 
 #atual {
@@ -247,14 +259,13 @@ section.slider-imagens {
 	background-color: white;
 }
 
-
 /*------------------------------------------ responsivo do header --------------------------------------------- */
 @media screen and (max-width: 900px){
     header {
         height: 100px;
     }
     
-    .header1 .botoes-menu i {
+    .header1 .botoes-menu a i {
         display: none;
     }
 
@@ -309,7 +320,7 @@ section.slider-imagens {
     }
 
     /* faz o botão hamburguer aparecer */
-    .header1 .botoes-menu i:last-child {
+    .header1 .botoes-menu a i:last-child {
         font-size: 28px;
     }
 }

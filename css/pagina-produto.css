@@ -1,0 +1,502 @@
+body {
+  background-color: rgb(235, 232, 232);
+  overflow: scroll;
+}
+
+section.visualizar-produto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.container-produto {
+  width: 1280px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  border: 1px solid #cdcdcd;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+section.sessao-produto {
+  height: 550px;
+}
+
+section.sessao-produto:nth-of-type(1),
+section.sessao-produto:nth-of-type(3) {
+  width: 30%;
+}
+
+section.sessao-produto:nth-of-type(2) {
+  width: 40%;
+}
+
+/* formatação da seção de título e descrição do produto */
+.sessao1 {
+  padding: 20px;
+}
+
+.sessao1 .titulo {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+/* formatação do título */
+.sessao1 .titulo h3 {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+/* formatação do ícone de favoritar ao lado do título do produto */
+.sessao1 .titulo h3 i {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: red;
+  opacity: 0.7;
+}
+.sessao1 .titulo h3 i:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.sessao1 .descricao {
+  width: 100%;
+}
+
+/* descrição do produto */
+.sessao1 .descricao .descricao-produto {
+  padding-bottom: 10px;
+  font-size: 16px;
+  text-align: justify;
+  color: gray;
+}
+
+/* nome do vendedor do produto */
+.sessao1 .descricao .nome-entregador {
+  font-size: 14px;
+  color: gray;
+  padding: 20px 0;
+}
+
+/* div que contem a informação dos materiais usados no produto */
+.materiais-produto {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.materiais-produto p:first-of-type {
+  font-size: 16px;
+  color: gray;
+}
+
+.materiais-produto p:last-of-type {
+  font-size: 16px;
+  color: rgb(75, 73, 73);
+  font-weight: 600px;
+}
+
+/* formatação da div da imagem do produto */
+.sessao2 {
+  padding: 10px;
+  background-color: #c1cbd3b4;
+}
+
+/* setas de passar imagem */
+.sessao2 .imagem-container .setas-imagem {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.sessao2 .imagem-container .setas-imagem i {
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.sessao2 .imagem-container .setas-imagem i:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.sessao2 .imagem-container .setas-imagem i {
+  font-size: 25px;
+}
+
+/* container que contém a imagem do produto */
+.sessao2 .imagem-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ajusta a imagem para caber dentro da div pai */
+.sessao2 .imagem-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.cores {
+  width: 100%;
+  font-size: 20px;
+  color: black;
+  display: flex;
+}
+
+.cores p {
+  width: 50%;
+  text-align: right;
+  margin-right: 8px;
+}
+
+/* div que contem os círculos das cores */
+.cores .circulo-cores {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* circulos das cores do produto */
+.cores .circulo-cores .circulo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: silver;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.473);
+}
+
+/* botões de comprar e adicionar ao carrinho */
+.botoes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.botao-carrinho {
+  width: 100%;
+  text-align: center;
+}
+
+/* botão de adicionar ao carrinho */
+.botao-carrinho form input {
+  width: 230px;
+  background-color: #002074;
+  color: white;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.botao-carrinho form input:hover {
+  transform: scale(1.1);
+  background-color: #021a57;
+}
+
+.botao-comprar {
+  width: 100%;
+  text-align: center;
+}
+
+/* botão de comprar agora */
+.botao-comprar form input {
+  width: 230px;
+  font-size: 18px;
+  background-color: #3a5cd4;
+  color: white;
+  padding: 10px;
+  outline: none;
+  border: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.botao-comprar form input:hover {
+  transform: scale(1.1);
+  background-color: #2e4cb9;
+}
+
+/* formatação da sessão 3 do produto */
+.sessao3 {
+  padding: 20px;
+}
+
+.avaliacao-produto {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.avaliacao-produto .estrelas {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 20px;
+  color: gray;
+}
+
+.avaliacao-produto .estrelas i {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.avaliacao-produto .estrelas i:hover {
+  color: black;
+}
+
+.avaliacao-produto .linha-vertical {
+  width: 2px;
+  height: 30px;
+  background-color: gray;
+  margin: 0 10px;
+}
+
+.avaliacao-produto .numero-avaliacoes p {
+  color: gray;
+}
+
+/* formatação do preço do produto */
+.preco-produto {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.preco-produto p:first-of-type {
+  font-size: 18px;
+  color: gray;
+  text-decoration: line-through;
+}
+
+.preco-produto p:last-of-type {
+  font-size: 30px;
+  color: rgb(66, 65, 65);
+  font-weight: 600;
+}
+
+/* formatação do produto */
+.estoque-produto {
+  width: 100%;
+}
+
+.estoque-produto p {
+  color: gray;
+  font-size: 18px;
+}
+
+/* formatação dos tamanhos do produto */
+.tamanhos-produto {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.tamanhos-produto .tamanho {
+  display: flex;
+}
+.tamanhos-produto .tamanho p:first-of-type {
+  font-size: 18px;
+  padding: 5px 15px;
+  background-color: rgb(228, 225, 225);
+  border-radius: 15px 0 0 15px;
+  border-right: 2px solid silver;
+}
+
+.tamanhos-produto .tamanho p:last-of-type {
+  font-size: 18px;
+  padding: 5px 15px;
+  background-color: rgb(228, 225, 225);
+  border-radius: 0 15px 15px 0;
+}
+
+.tamanhos-produto .tamanho p i {
+  margin: 5px 0;
+  font-size: 14px;
+  color: gray;
+  cursor: pointer;
+}
+
+/* formatação calcular frete do produto */
+.calcular-frete {
+  width: 100%;
+}
+
+.calcular-frete form {
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* input CEP do usuário */
+.calcular-frete form input[type="text"] {
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 9px;
+  border: 2px solid silver;
+  outline: none;
+  border-radius: 10px;
+}
+
+/* input número da casa */
+.calcular-frete form input[type="number"] {
+  width: 25%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 9px;
+  border: 2px solid silver;
+  outline: none;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+/* prazo e preço do frete */
+.calcular-frete .prazo-valor-frete {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* prazo de entrega  */
+.calcular-frete .prazo-frete p:first-of-type {
+  color: gray;
+  font-size: 18px;
+  font-weight: 300;
+}
+.calcular-frete .prazo-frete p:last-of-type {
+  color: rgb(78, 78, 78);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* valor do frete */
+.calcular-frete .valor-frete p:first-of-type {
+  color: gray;
+  font-size: 18px;
+  font-weight: 300;
+}
+.calcular-frete .valor-frete p:last-of-type {
+  color: rgb(78, 78, 78);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* --------------- formatação do perfil do vendedor do produto --------------- */
+section.perfil-vendedor {
+  width: 100%;
+}
+
+.perfil-container {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #cdcdcd;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  display: flex;
+  align-items: center;
+}
+
+.perfil-container .info-perfil-content {
+  width: 40%;
+  display: flex;
+  border-right: 2px solid silver;
+}
+
+/* circulo que contém a imagem do perfil do vendedor */
+.perfil-container .info-perfil-content .foto-perfil {
+  width: 110px;
+  height: 110px;
+  margin-left: 20px;
+  background-color: silver;
+  border-radius: 50%;
+}
+
+.perfil-container .info-perfil-content .nome-vendedor {
+  width: calc(100% - 130px);
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.perfil-container .info-perfil-content .nome-vendedor h3 {
+  font-size: 23px;
+  color: black;
+  font-weight: 500;
+}
+
+/* formatação do botão de visalizar o perfil do vendedor */
+.perfil-container .info-perfil-content .nome-vendedor a {
+  width: 260px;
+  text-align: center;
+  padding: 8px;
+  background-color: #002074;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.perfil-container .info-perfil-content .nome-vendedor a:hover {
+  transform: scale(1.1);
+  background-color: #021a57;
+}
+
+/* informações sobre o vendedor */
+.info-vendedor-content {
+  width: 60%;
+  display: flex;
+}
+
+.info-vendedor-content .info-vendedor-div {
+  width: 50%;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* altera as cores dos números do vendedor */
+.info-vendedor-content .info-vendedor-div p span {
+  color: blue;
+  font-weight: 500;
+}
+
+/* da um espaçamento para as estrelas tendo somente a primeira estrela como base */
+.info-vendedor-content .info-vendedor-div p i:first-of-type {
+  margin-left: 9px;
+}
+
+/* formata o resto das estrelas */
+.info-vendedor-content .info-vendedor-div p i {
+  cursor: pointer;
+  color: black;
+}

@@ -6,11 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NONA Artesanatos</title>
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./responsivo/responsivo-index.css">
+        <link rel="stylesheet" href="./css/footer.css">
         <!--link do fontawesome-->
         <script src="https://kit.fontawesome.com/62e5760e2b.js" crossorigin="anonymous"></script>
-        <!--link do jquery-->
-        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.3.min.js"></script>
+        <!-- link boxicons -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <!-- link css do slider de produto -->
     </head>
     <body>
 
@@ -27,10 +28,26 @@
                             <input type="text" name="buscar" id="buscar" placeholder="Buscar...">
                         </div>
                         <div class="botoes-menu">
-                            <i class="fa-solid fa-heart"></i> <!-- ícone coração -->
-                            <i class="fa-solid fa-user"></i> <!-- ícone perfil -->
-                            <i class="fa-solid fa-cart-shopping"></i> <!-- ícone carrinho -->
-                            <i class="fa-solid fa-bars"></i> <!-- ícone botão hamburguer -->
+                            <!-- <nav class="nav-links">
+                                <ul class="links">
+                                    <li>
+                                        <a href="#">
+                                            <i class='bx bxs-heart'></i> 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./paginas-html/pagina-produto.php">
+                                            <i class='bx bxs-user'></i> 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class='bx bxs-cart-alt'></i> 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav> -->
+                            <a href="./paginas-html/pagina-produto.php">link produtos</a>
                         </div>
                     </div>
                     <div class="header2">
@@ -69,7 +86,7 @@
                     <!-- fim botões de passar e voltar -->
 
                     <div id="atual" class="image">
-                        <img src="./imagens/0.jpg">
+                        <img src="./imagens/fundo-artesanato.jpg">
                     </div>
 
                     <div class="image">
@@ -88,6 +105,10 @@
                 <div class="balls">
                 </div>
             </div>
+        </section>
+
+        <section>
+            <a href="./paginas-html/pagina-cadastro.php">link pagina de cadastro de cliente</a>
         </section>
 
         <script>
@@ -158,4 +179,10 @@
 		</script>
         
     </body>
+
+    <!-- swiper js para slider de produtos -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- documento javascript do slider de produtos -->
+    <script src="js/script.js"></script>
 </html>
