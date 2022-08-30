@@ -154,20 +154,91 @@
                 </div>
             </section>
 
+            <!-- <section class="sessao-slider-produtos">
+
+            </section> -->
+
             <section class="ficha-tecnica">
                 <div class="container">
                     <div class="titulo">
                         <h2>Ficha Técnica</h2>
-                        <div class="tabela-ficha-tecnica">
-                            <table>
-                                <tr>
-                                    <td class="nome-categoria">Material usado</td>
-                                    <td>Lã, e mais algumas coisas</td>
-                                </tr>
-                            </table>
-                        </div>
+                    </div>
+                    <div class="tabela-ficha-tecnica">
+                        <table>
+                            <tr class="listra">
+                                <td class="nome-categoria">Material usado</td>
+                                <td class="categoria-item">Lã, e mais algumas coisas</td>
+                            </tr>
+                            <tr>
+                                <td class="nome-categoria">Tamanho</td>
+                                <td class="categoria-item">1m x 1,50m</td>
+                            </tr>
+                            <tr class="listra">
+                                <td class="nome-categoria">Código do produto</td>
+                                <td class="categoria-item">385289350</td>
+                            </tr>
+                            <tr>
+                                <td class="nome-categoria">Fabricante</td>
+                                <td class="categoria-item">Nome do artesão</td>
+                            </tr>
+                            <tr class="listra">
+                                <td class="nome-categoria">Cores</td>
+                                <td class="categoria-item">Rosa, verde, roxo</td>
+                            </tr>
+                            <tr>
+                                <td class="nome-categoria">Peso</td>
+                                <td class="categoria-item">2 kg</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </section>
+
+            <section class="sessao-comentario">
+                <div class="container">
+                    <div class="titulo">
+                        <h2>Comentários</h2>
+                    </div>
+                    <div class="container-comentario">
+                        <div class="container-textarea">
+                            <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Deixe um comentário avaliando o produto"></textarea>
+                        </div>
+                        <div class="container-avaliacao">
+                            <p>Avalie o produto</p>
+                            <div class="estrelas-avalia-produto">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="botao-comentar">
+                            <input type="submit" value="Comentar">
+                        </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="container">
+                    <div class="saiba-mais">
+                        <p>Saiba-mais</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <nav>
+                        <ul class="links-footer">
+                            <li>
+                                <a href="#">| Central de ajuda |</a>
+                            </li>
+                            <li>
+                                <a href="#">| Minha conta |</a>
+                            </li>
+                            <li>
+                                <a href="#">| Seja parceiro |</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </footer>
         </body>
     </html>
