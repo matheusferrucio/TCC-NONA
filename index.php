@@ -5,13 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NONA Artesanatos</title>
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/footer.css">
         <!--link do fontawesome-->
         <script src="https://kit.fontawesome.com/62e5760e2b.js" crossorigin="anonymous"></script>
         <!-- link boxicons -->
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-        <!-- link css do slider de produto -->
+        <!-- link css do bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- links dos meus documentos css -->
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
 
@@ -28,26 +29,13 @@
                             <input type="text" name="buscar" id="buscar" placeholder="Buscar...">
                         </div>
                         <div class="botoes-menu">
-                            <!-- <nav class="nav-links">
-                                <ul class="links">
-                                    <li>
-                                        <a href="#">
-                                            <i class='bx bxs-heart'></i> 
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./paginas-html/pagina-produto.php">
-                                            <i class='bx bxs-user'></i> 
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class='bx bxs-cart-alt'></i> 
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav> -->
-                            <a href="./paginas-html/pagina-produto.php">link produtos</a>
+                            <nav class="nav-links">
+                                <a href="#"><i class="fa-solid fa-heart"></i></a>
+
+                                <a href="./paginas-html/pagina-produto.php"><i class="fa-solid fa-user"></i></a>
+
+                                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            </nav>
                         </div>
                     </div>
                     <div class="header2">
@@ -73,116 +61,91 @@
             </div>
         </header>
 
-        <section class="slide-imagens">
-            <div class="slide">
-                <div class="slides">
-                    <!-- botões de passar e voltar -->
-                    <div id="voltar" class="btn">
-                        <i class="fas fa-chevron-left"></i>
-                    </div>
-                    <div id="next" class="btn">
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-                    <!-- fim botões de passar e voltar -->
+        <!-- ---------------------------------------- slider de imagens ---------------------------------------- -->
 
-                    <div id="atual" class="image">
-                        <img src="./imagens/fundo-artesanato.jpg">
-                    </div>
-
-                    <div class="image">
-                        <img src="./imagens/1.jpg">
-                    </div>
-
-                    <div class="image">
-                        <img src="./imagens/2.jpg">
-                    </div>
-
-                    <div class="image">
-                        <img src="./imagens/3.jpg">
-                    </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <!-- indicadores de qual slide estamos, aquelas listras em baixo -->
+            <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <!-- carousel-inner é o container que contém as imagens do slider -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="./imagens/0.jpg" alt="Primeiro Slide">
                 </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./imagens/1.jpg" alt="Segundo Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./imagens/2.jpg" alt="Terceiro Slide">
+                </div>
+            </div>
+            <!-- botão de voltar slide -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <!-- botão de passar slide -->
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
 
-                <div class="balls">
+        <!-- ---------------------------------------- sessão de imagens promocionais ---------------------------------------- -->
+
+        <section class="sessao-imagens">
+            <div class="container">
+                <div class="imagens-content">
+                    <div class="imagem-item">
+                        <img src="./imagens/imagem1.jpg" alt="img 1">
+                        <div class="titulo-img">
+                            <p>Amigurumi</p>
+                        </div>
+                        <div class="efeito-hover-img">
+                            <h3>Veja nossos amigurumis</h3>
+                            <p>Temos todo tipo de amigurumi, clique no botão abaixo para conferir</p>
+                            <a href="#">Ver produtos</a>
+                        </div>
+                    </div>
+
+                    <div class="imagem-item">
+                        <img src="./imagens/imagem2.jpg" alt="img 2">
+                        <div class="titulo-img">
+                            <p>MDF's</p>
+                        </div>
+                        <div class="efeito-hover-img">
+                            <h3>Veja nossas artes em MDF</h3>
+                            <p>Temos todo tipo de arte em MDF, produto de qualidade e beleza excelentes</p>
+                            <a href="#">Ver produtos</a>
+                        </div>
+                    </div>
+
+                    <div class="imagem-item">
+                        <img src="./imagens/imagem3.jpg" alt="img 3">
+                        <div class="titulo-img">
+                            <p>Pinceis</p>
+                        </div>
+                        <div class="efeito-hover-img">
+                            <h3>Pinceis para pintura</h3>
+                            <p>Todo tipo de pincel para pintura para que você possa dar vida a sua arte!</p>
+                            <a href="#">Ver produtos</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <a href="./paginas-html/pagina-cadastro.php">link pagina de cadastro de cliente</a>
+        <section class="produtos">
+            
         </section>
 
-        <script>
-            // SCRIPT DO SLIDE DE IMAGENS
-
-			// essas variáveis pegam os elementos do documento e transformam em variáveis para serem manipulados
-			var balls = document.querySelector('.balls')
-			var quant = document.querySelectorAll('.slides .image')
-			var atual = 0
-			var imagem = document.getElementById('atual')
-			var next = document.getElementById('next')
-			var voltar = document.getElementById('voltar')
-			var rolar = true
-
-			// cria uma bolinha de marcação de acordo com a quantidade de slides
-			for(let i=0; i< quant.length; i++){
-				var div = document.createElement('div')
-				div.id = i
-				balls.appendChild(div)
-			}
-			document.getElementById('0').classList.add('imgAtual')
-
-			var pos = document.querySelectorAll('.balls div')
-
-			for(let i=0; i< pos.length; i++) {
-				pos[i].addEventListener('click', ()=>{
-					atual = pos[i].id
-					rolar = false
-					slide()
-				})
-			}
-
-			// botão de voltar
-			voltar.addEventListener('click', ()=>{
-				atual--
-				rolar = false
-				slide()
-			})
-			// botão de passar
-			next.addEventListener('click', ()=>{
-				atual++
-				rolar = false
-				slide()
-			})
-
-			// essa função é responsável por realizar a rolagem do slide
-			function slide(){
-				if(atual >= quant.length){
-					atual = 0
-				}
-				else if(atual < 0){
-					atual = quant.length-1
-				}
-				document.querySelector('.imgAtual').classList.remove('imgAtual')
-				imagem.style.marginLeft = -1280*atual+'px'
-				document.getElementById(atual).classList.add('imgAtual')
-			}
-			// intervalo de 4s para passar o slide, e se o slide for passar antes disso ele reincia
-			setInterval(()=>{
-				if(rolar){
-				atual++
-				slide()
-				}
-				else{
-					rolar = true
-				}
-			},4000)
-		</script>
+        <!-- scripts do bootstrap -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         
     </body>
-
-    <!-- swiper js para slider de produtos -->
-    <script src="js/swiper-bundle.min.js"></script>
-
-    <!-- documento javascript do slider de produtos -->
-    <script src="js/script.js"></script>
 </html>

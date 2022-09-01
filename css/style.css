@@ -13,7 +13,8 @@ html, body {
 }
 
 body {
-    background-color: var(--cinza-claro);
+    background-color: white;
+    overflow-y: scroll;
 }
 
 /* cores usadas no site */
@@ -41,6 +42,7 @@ body {
 
 /* formatação do header */
 header {
+    /* position: fixed; */
     width: 100%;
     height: 150px;
     background-color: #002074;
@@ -111,25 +113,19 @@ header > .container {
     justify-content: center;
     font-size: 32px;
     color: white;
-    cursor: pointer;
-
-    background-color: green;
 }
 
-.header1 .botoes-menu a:not(:last-child) {
-    margin-right: 15px;
+.botoes-menu .nav-links a {
+    position: relative;
     color: white;
-    text-decoration: none;
+    font-size: 35px;
+    transition: all .4s ease;
 }
-
-/* 
-.header1 .botoes-menu a i:not(:last-child) {
-    margin-right: 15px;
-} */
-
-/* faz o botão hamburguer desaparecer */
-.header1 .botoes-menu i:last-child {
-    display: none;
+.botoes-menu .nav-links a:not(:last-of-type) {
+    margin-right: 10px;
+}
+.botoes-menu .nav-links a:hover {
+    top: -5px;
 }
 
 /*------------------------------------------ header 2 --------------------------------------------- */
@@ -160,106 +156,156 @@ header > .container {
     opacity: .7;
 }
 
-/*------------------------------------------ slider de imagens --------------------------------------------- */
+/*------------------------------------------ formatação imagens slider imagens --------------------------------------------- */
+.carousel {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1280px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+}
 
-/* container que irá conter as imagens */
-section.slide-imagens {
+.carousel-item img {
+    max-width: 1280px;
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+/*------------------------------------------ sessão de imagens promocionais --------------------------------------------- */
+.sessao-imagens {
+    width: 100%;
+}
+
+.imagens-content {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: silver; */
+}
+
+.imagem-item {
     position: relative;
+    width: 32%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid silver;
+    transition: all .4s ease;
+}
+.imagem-item img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+/* .imagem-item:hover {
+    transform: scale(1.1);
+} */
+
+/* card azul na parte de baixo da imagem */
+.titulo-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: blue;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* efeito hover com conteúdo e botão */
+.imagem-item .efeito-hover-img {
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.349);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease;
+
+    opacity: 0;
+    pointer-events: none;
 }
 
-/* slide geral que contém as imagens */
-.slide {
-    position: relative;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-	width: 1280px;
-	height: 400px;
-	overflow: hidden;
-	border-radius: 15px;
-	transition: all .4s;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+/* título efeito hover */
+.imagem-item .efeito-hover-img h3 {
+    color: white;
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 40px;
+    cursor: default;
 }
 
-.slides {
-	width: 6000px; /* é necessário um tamanho maior do que a div pai para que as imagens fiquem uma do lado da outra */
-	display: flex;
+/* parágrafo do efeito hover */
+.imagem-item .efeito-hover-img p {
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: justify;
+    cursor: default;
 }
 
-/* define o tamanho da imagem */
-.image img {
-	width: 1280px;
-	height: 400px;
-    object-fit: cover;
+/* link do efeito hover */
+.imagem-item .efeito-hover-img a {
+    width: 180px;
+    margin-top: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    background-color: #002074;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+.imagem-item .efeito-hover-img a:hover {
+    background-color: blue;
+    transform: scale(1.1);
 }
 
-#atual {
-	transition: all .6s;
+.imagem-item:hover > .efeito-hover-img {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-/* pega os botões de passar e voltar */
-.btn {
-	position: absolute;
-	color: white;
-	padding: 10px;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	transition: all .4s;
-	font-size: 32px;
-	margin-top: -10px;
-}
 
-.btn:hover {
-	transform: scale(1.5);
-}
-
-#voltar {
-	top: 50%;
-	left: 1%;
-}
-
-#next {
-	top: 50%;
-	right: 1%;
-}
-
-.balls {
-	position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-	width: 1024px;
-	display: flex;
-	justify-content: center;
-	margin-top: -45px;
-}
-
-/* faz as bolinhas que marcam em qual imagem estamos */
-.balls div {
-	transition: all .5s;
-	border: 3px solid white;
-	padding: 6px;
-	border-radius: 50%;
-	margin-right: 15px;
-	cursor: pointer;
-}
-
-.balls div:hover {
-	background-color: white;
-}
-
-.imgAtual {
-	transition: all .5s;
-	background-color: white;
-}
 
 /*------------------------------------------ responsivo do header --------------------------------------------- */
+@media screen and (max-width: 1024px){
+    .imagens-content {
+        width: 100%;
+        height: auto
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .imagem-item {
+        position: relative;
+        width: 600px;
+        height: 500px;
+        object-fit: cover;
+        border: 1px solid silver;
+        transition: all .4s ease;
+    }
+}
+
 @media screen and (max-width: 900px){
     header {
         height: 100px;
@@ -288,6 +334,26 @@ section.slide-imagens {
         pointer-events: none;
     }
 
+    /* .imagem-item:hover > .efeito-hover-img {
+        opacity: 0;
+        pointer-events: none;
+    } */
+}
+
+@media screen and (max-width: 630px){
+    .imagens-content {
+        width: 100%;
+        height: auto
+    }
+
+    .imagem-item {
+        position: relative;
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        border: 1px solid silver;
+        transition: all .4s ease;
+    }
 }
 
 @media screen and (max-width: 550px){
@@ -310,8 +376,8 @@ section.slide-imagens {
     /* input de buscar produto */
     .header1 .buscar input[type=text] {
         width: 85%;
-        height: 30px;
-        line-height: 30px;
+        height: 40px;
+        line-height: 40px;
     }
 
     /* div que contêm os ícones do header */
@@ -324,3 +390,22 @@ section.slide-imagens {
         font-size: 28px;
     }
 }
+
+/* 
+    MEDIA QUERIE PARA GALAXY Z-FOLD
+
+@media screen and (max-width: 285px){
+    .imagens-content {
+        width: 100%;
+        height: auto
+    }
+
+    .imagem-item {
+        position: relative;
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        border: 1px solid silver;
+        transition: all .4s ease;
+    }
+} */
