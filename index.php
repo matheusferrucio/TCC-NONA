@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <!-- links dos meus documentos css -->
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     </head>
     <body>
 
@@ -35,6 +36,8 @@
                                 <a href="./paginas-html/pagina-produto.php"><i class="fa-solid fa-user"></i></a>
 
                                 <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+                                <a href="#"><i class="fa-solid fa-bars"></i></a> <!-- ícone do botão hamburguer -->
                             </nav>
                         </div>
                     </div>
@@ -139,7 +142,125 @@
         </section>
 
         <section class="produtos">
-            
+            <div class="container">
+                <div class="produtos-container">
+                    <?php
+                        for ($i = 0; $i < 12; $i++){
+                            echo "<a href='./paginas-html/pagina-produto.php'>
+                            <div class='card-produto'>
+                                <div class='img-produto'>
+                                    <img src='./imagens/tapete-de-vo.jpg' alt='imagem do produto'>
+                                </div>
+                                <div class='produto-conteudo'>
+                                    <div class='descricao-produto'>
+                                        <p>Produto muito bom, parece os falsificados da china</p>
+                                    </div>
+                                    <div class='avaliacao-card-produto'>
+                                        <i class='fa-solid fa-star'></i>
+                                        <i class='fa-solid fa-star'></i>
+                                        <i class='fa-solid fa-star'></i>
+                                        <i class='fa-solid fa-star'></i>
+                                        <i class='fa-solid fa-star'></i>
+                                    </div>
+                                    <div class='preco-produto'>
+                                        <span>De: R$ 190,00</span>
+                                        <span>Por: R$ 150,00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>";
+                        }
+                    ?>
+                    <!--
+                        CÓDIGO USADO PARA TESTAR O CARD COM O LINK PARA A PAGINA DE PRODUTO    
+                    <a href="./paginas-html/pagina-produto.php">
+                        <div class="card-produto">
+                            <div class="img-produto">
+                                <img src="./imagens/tapete-de-vo.jpg" alt="imagem do produto">
+                            </div>
+                            <div class="produto-conteudo">
+                                <div class="descricao-produto">
+                                    <p>Produto muito bom, parece os falsificados da china</p>
+                                </div>
+                                <div class="avaliacao-card-produto">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="preco-produto">
+                                    <span>De: R$ 190,00</span>
+                                    <span>Por: R$ 150,00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="carousel-marcas">
+            <div class="container">
+            <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wraper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content"> <!-- tudo que estiver aqui dentro faz parte da imagem do card -->
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="./imagens/profile1.jpg" alt="imagem 1" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">David Dell</h2>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus autem in ducimus delectus dignissimos, ea </p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content"> <!-- tudo que estiver aqui dentro faz parte da imagem do card -->
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="./imagens/profile2.jpg" alt="imagem 1" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">David Dell</h2>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus autem in ducimus delectus dignissimos, ea </p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content"> <!-- tudo que estiver aqui dentro faz parte da imagem do card -->
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="./imagens/profile3.jpg" alt="imagem 1" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">David Dell</h2>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus autem in ducimus delectus dignissimos, ea </p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+            </div>    
         </section>
 
         <!-- scripts do bootstrap -->
@@ -147,5 +268,9 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         
+        <!-- scripts slider de marcas -->
+        <script src="./js/swiper-bundle.min.js"></script>
+        <!-- script de formatação do slider -->
+        <script src="./js/script.js"></script>
     </body>
 </html>

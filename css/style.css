@@ -9,17 +9,18 @@
 
 html, body {
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body {
-    background-color: white;
+    background-color: rgb(235, 231, 231);
     overflow-y: scroll;
 }
 
 /* cores usadas no site */
 :root {
     --azul-escuro: #002074;
+    --cor-texto: rgb(75, 73, 73);
 }
 
 /* divs que serão mais usadas */
@@ -116,16 +117,20 @@ header > .container {
 }
 
 .botoes-menu .nav-links a {
-    position: relative;
     color: white;
     font-size: 35px;
-    transition: all .4s ease;
-}
-.botoes-menu .nav-links a:not(:last-of-type) {
-    margin-right: 10px;
+    transition: all .3s ease;
 }
 .botoes-menu .nav-links a:hover {
-    top: -5px;
+    text-decoration: none;
+    transform: scale(1.06);
+}
+.botoes-menu .nav-links a:not(:nth-of-type(3)) {
+    margin-right: 10px;
+}
+
+.botoes-menu .nav-links a:last-of-type {
+    display: none;
 }
 
 /*------------------------------------------ header 2 --------------------------------------------- */
@@ -177,6 +182,7 @@ header > .container {
 /*------------------------------------------ sessão de imagens promocionais --------------------------------------------- */
 .sessao-imagens {
     width: 100%;
+    margin: 60px 0;
 }
 
 .imagens-content {
@@ -184,7 +190,6 @@ header > .container {
     height: 500px;
     display: flex;
     justify-content: space-between;
-    /* background-color: silver; */
 }
 
 .imagem-item {
@@ -283,17 +288,270 @@ header > .container {
     pointer-events: auto;
 }
 
+/*------------------------------------------ sessão de produtos --------------------------------------------- */
+section.produtos {
+    width: 100%;
+    margin: 100px 0;
+}
 
+/* container de produtos */
+section.produtos .produtos-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    padding: 5px;
+}
 
-/*------------------------------------------ responsivo do header --------------------------------------------- */
+section.produtos .produtos-container a {
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+section.produtos .produtos-container a:hover {
+    text-decoration: none;
+}
+
+section.produtos .produtos-container a:hover > .card-produto {
+    transform: scale(1.02);
+}
+
+/* card do produto */
+.card-produto {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    transition: all .2s ease;
+}
+
+/* div que contém a imagem */
+.card-produto .img-produto {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* imagem do produto */
+.card-produto .img-produto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* conteúdo e preço do produto */
+.card-produto .produto-conteudo {
+    width: 100%;
+    height: 50%;
+}
+
+.card-produto .produto-conteudo .descricao-produto p {
+    width: 100%;
+    text-align: justify;
+    font-size: 15px;
+    color: var(--cor-texto);
+    padding-top: 20px;
+}
+
+/* estrelas de acaliação do produto */
+.card-produto .produto-conteudo .avaliacao-card-produto {
+    width: 100%;
+    color: yellow;
+    font-size: 18px;
+}
+
+.card-produto .produto-conteudo .preco-produto {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.card-produto .produto-conteudo .preco-produto span:first-of-type {
+    color: silver;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.card-produto .produto-conteudo .preco-produto span:last-of-type {
+    color: var(--cor-texto);
+    font-size: 20px;
+}
+
+/*------------------------------------------ slider de marcas --------------------------------------------- */
+
+.slide-container {
+    width: 100%;
+    max-width: 1280px;
+    padding: 40px 0;
+}
+
+.slide-content {
+    padding: 40px 0;
+    margin: 0 40px;
+    overflow: hidden; /* esconde os sliders laterais que não estão na tela principal do slider */
+    border-radius: 25px;
+}
+
+/* card que contêm a imagem e o conteúdo */
+.card {
+    border-radius: 25px;
+    background-color: white;
+}
+
+.image-content,
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.image-content {
+    position: relative; /* limita o overlay devido ao position absolulte que ele possui */
+    row-gap: 5px; /* row-gap define o tamanho do intervalo da linha do objeto */
+    padding: 25px 0;
+}
+
+/* fundo azul atrás da imagem */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: silver;
+
+    border-radius: 25px 25px 0 25px;
+}
+
+/* cria dois quadradinhos vazios para aplicar o efeito visto no canto inferior direito do card da imagem */
+/* cria um quadradinho para cada código, before e after */
+.overlay::before,
+.overlay::after {
+    content: ''; /* responsável por criar os quadradinhos */
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: silver;
+}
+
+/* pega o segundo quadradinho(que foi formado pelo .overlay::after) e deixa ele branco fazendo que apareça apenas o pontinha do quadradinho do before, deixando assim o efeito visto no caed */
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: white;
+}
+
+/* div que limita o tamanho da imagem */
+.card-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* padding: 3px;
+    background-color: white; */
+}
+
+/* formata a imagem para caber dentro do elemento pai que é .card-image */
+.card-image .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    /* border: 4px solid #4070F4; */
+}
+
+/* pega o nome ou o título do card */
+.name {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* pega a descrição do card */
+.description {
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+
+.button {
+    border: none;
+    font-size: 16px;
+    color: white;
+    padding: 8px 16px;
+    background-color: #4070F4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.button:hover {
+    background-color: #1951ec;
+}
+
+.swiper-navBtn {
+    color: #6E93f7;
+    transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+    color: #4070F4;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 40px;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: #6E93f7;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #4070F4;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-content {
+        margin: 0 10px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+/*---------------------------------------------------- responsivo ------------------------------------------------------- */
 @media screen and (max-width: 1024px){
     .imagens-content {
         width: 100%;
-        height: auto
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        flex-wrap: nowrap;
     }
 
     .imagem-item {
@@ -303,6 +561,35 @@ header > .container {
         object-fit: cover;
         border: 1px solid silver;
         transition: all .4s ease;
+    }
+}
+
+@media screen and (max-width: 970px){
+    .header1 .buscar {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* formata os ícones do header */
+    .header1 .botoes-menu {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: white;
+    }
+
+    .header1 .botoes-menu a:not(:last-of-type) {
+        display: none;
+    }
+
+    .header1 .botoes-menu a:last-of-type {
+        display: block;
     }
 }
 
@@ -333,11 +620,113 @@ header > .container {
         display: none;
         pointer-events: none;
     }
+}
 
-    /* .imagem-item:hover > .efeito-hover-img {
-        opacity: 0;
-        pointer-events: none;
-    } */
+@media screen and (max-width: 705px){
+    .card-produto {
+        width: 85%;
+        height: 200px;
+        display: flex;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+    
+    /* div que contém a imagem */
+    .card-produto .img-produto {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    /* imagem do produto */
+    .card-produto .img-produto img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    
+    /* conteúdo e preço do produto */
+    .card-produto .produto-conteudo {
+        width: 50%;
+        height: 100%;
+        padding-left: 20px;
+        font-size: 14px;
+    }
+
+    .card-produto .produto-conteudo .descricao-produto p,
+    .card-produto .produto-conteudo .preco-produto {
+        padding-top: 0;
+    }
+
+    .card-produto .produto-conteudo .preco-produto {
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .card-produto {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        border-radius: 10px;
+    }
+    
+    /* div que contém a imagem */
+    .card-produto .img-produto {
+        width: 50%;
+        height: 90%;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: auto 0;
+    }
+    
+    /* imagem do produto */
+    .card-produto .img-produto img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    
+    /* conteúdo e preço do produto */
+    .card-produto .produto-conteudo {
+        width: 50%;
+        height: 90%;
+        padding-left: 20px;
+        font-size: 14px;
+        margin: auto 0  ;
+    }
+        
+    .card-produto .produto-conteudo .descricao-produto p {
+        width: 100%;
+        font-size: 13px;
+        padding-top: 0;
+    }
+
+    /* estrelas de acaliação do produto */
+    .card-produto .produto-conteudo .avaliacao-card-produto {
+        width: 100%;
+        font-size: 11px;
+    }
+
+    .card-produto .produto-conteudo .preco-produto {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .card-produto .produto-conteudo .preco-produto span:first-of-type {
+        color: silver;
+        font-size: 10px;
+        text-decoration: line-through;
+    }
+
+    .card-produto .produto-conteudo .preco-produto span:last-of-type {
+        color: var(--cor-texto);
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 630px){
@@ -391,21 +780,15 @@ header > .container {
     }
 }
 
-/* 
-    MEDIA QUERIE PARA GALAXY Z-FOLD
-
-@media screen and (max-width: 285px){
-    .imagens-content {
-        width: 100%;
-        height: auto
+@media screen and (max-width: 280px){
+    section.produtos > .container {
+        width: 99%;
     }
-
-    .imagem-item {
-        position: relative;
+    
+    .card-produto {
         width: 100%;
-        height: 380px;
-        object-fit: cover;
-        border: 1px solid silver;
-        transition: all .4s ease;
+        height: 230px;
+        display: flex;
+        border-radius: 10px;
     }
-} */
+}

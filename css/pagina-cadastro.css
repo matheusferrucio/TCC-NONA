@@ -1,5 +1,6 @@
 :root {
     --azul-escuro: #002074;
+    --cor-texto: rgb(60, 60, 60);
 }
 
 header {
@@ -45,9 +46,15 @@ main section.container {
     width: 100%;
     display: flex;
     justify-content: center;
-    font-size: 25px;
+    font-size: 2em;
     color: var(--azul-escuro);
     margin-bottom: 20px;
+}
+
+.separacao {
+    width: 100%;
+    color: var(--cor-texto);
+    font-size: 15px;
 }
 
 /* div que contém o formulário de cadastro */
@@ -60,7 +67,7 @@ main section.container {
     width: 100%;
     /* background-color: silver; */
     padding: 10px 0;
-    margin: 10px 0;
+    /* margin: 10px 0; */
 }
 
 /* div que organiza os inputs e ajusta a largura, esta classe está sendo usada pra ajustar todos os inputs */
@@ -71,7 +78,7 @@ main section.container {
 }
 .sessao-form label {
     color: rgb(60, 60, 60);
-    font-size: 20px;
+    font-size: 1.2em;
 }
 .sessao-form input[type=text],
 .sessao-form input[type=email],

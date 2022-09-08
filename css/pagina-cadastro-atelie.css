@@ -1,0 +1,272 @@
+:root {
+    --azul-escuro: #002074;
+    --cor-texto: rgb(60, 60, 60);
+}
+
+body {
+    background-color: rgb(235, 231, 231);
+    overflow-y: scroll;
+}
+
+/* excluindo o header desnecessário */
+header {
+    height: 200px;
+}
+
+
+header .header1,
+header .header2 {
+    display: none;
+}
+
+/* container que contém a logo */
+.container .container-logo {
+    width: 200px;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* logo do header */
+.container .container-logo .logo {
+    margin-top: 15px;
+}
+
+
+/* sessão com o formulário de cadastro de ateliê */
+section.cadastro-atelie {
+    width: 100%;
+}
+
+/* container que contém todo o form e define a largura máxima */
+.cadastro-atelie .container {
+    margin-top: 50px;
+    position: relative;
+    top: -100px;
+}
+
+.formulario-content {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* div que contém o título do formulário de cadastro */
+.formulario-content .titulo-formulario {
+    width: 100%;
+    color: var(--azul-escuro);
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* texto e linha logo abaixo do título */
+.formulario-content .divisao {
+    width: 100%;
+    color: var(--cor-texto);
+    font-size: 15px;
+}
+
+.formulario-cadastro {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* cadas sessao-form contém uma linha com inputs do formulário de cadastro */
+.formulario-cadastro .sessao-form {
+    width: 100%;
+    margin: 5px 0;
+    display: flex;
+}
+
+/* divs para definir a largura das divs dos inputs */
+.col100 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.col80 {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.col70 {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.col60 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.col50 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.col40 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.col30 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.col20 {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+/* ------------------------------ */
+
+.sessao-form {
+    padding: 8px 0;
+}
+
+.sessao-form input {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 8px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    outline: none;
+}
+
+.sessao-form label {
+    color: rgb(60, 60, 60);
+    font-size: 1.2em;
+}
+
+/* aplicando espaçamento do iput de cnpj do input de email */
+.sessao-form .cnpj input[type=text],
+.sessao-form .nome-fantasia input[type=text],
+.sessao-form .codigo-cnae input[type=text],
+.sessao-form .cep input[type=number] {
+    margin-right: 15px;
+}
+
+.enviar-cadastro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.enviar-cadastro .atencao {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    font-size: 12px;
+    padding: 15px 0;
+}
+
+.enviar-cadastro .atencao p i {
+    font-size: 16px;
+    color: orangered;
+}
+
+/* mensagem de aviso no final da pagina de cadastro */
+.enviar-cadastro .atencao p {
+    font-size: 14px;
+    color: var(--cor-texto);
+}
+
+.enviar-cadastro input[type=submit] {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    border: 1px solid #002074;
+    background-color: #021a57;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.enviar-cadastro input[type=submit]:hover {
+    transform: scale(1.1);
+    background-color: #011955;
+}
+
+@media screen and (max-width: 1030px){
+    .sessao-form .cep {
+        width: 50%;
+    }
+    .sessao-form .numero {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .cadastro-atelie .container {
+        margin-top: 50px;
+        position: relative;
+        top: -140px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    
+
+    .sessao-form {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .sessao-form > div {
+        width: 100%;
+    }
+
+    .sessao-form .cep {
+        width: 100%;
+    }
+    .sessao-form .numero {
+        width: 100%;
+    }
+
+    .sessao-form .cnpj input[type=text],
+    .sessao-form .nome-fantasia input[type=text],
+    .sessao-form .codigo-cnae input[type=text],
+    .sessao-form .cep input[type=number] {
+        margin-right: 0;
+    }
+
+    .enviar-cadastro .atencao p i {
+        font-size: 14px;
+        color: orangered;
+    }
+    
+    /* mensagem de aviso no final da pagina de cadastro */
+    .enviar-cadastro .atencao p {
+        font-size: 12px;
+        color: var(--cor-texto);
+    }
+
+    .enviar-cadastro input[type=submit] {
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 20px;
+    
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .cadastro-atelie .container {
+        margin-top: 50px;
+        position: relative;
+        top: -160px;
+    }
+}
