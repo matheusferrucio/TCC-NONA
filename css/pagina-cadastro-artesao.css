@@ -1,0 +1,50 @@
+:root {
+    --azul-escuro: #002074;
+    --cor-texto: rgb(75, 73, 73);
+}
+
+.data-nascimento {
+    margin-right: 15px;
+}
+
+/* container dos gêneros */
+.genero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* título do gênero */
+.titulo-genero {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    color: var(--cor-texto);
+}
+
+.genero {
+    width: 100%;
+    display: flex;
+}
+
+.sexo-item {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}   
+
+@media screen and (max-width: 350px){
+    .genero {
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .sexo-item {
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}

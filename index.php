@@ -97,6 +97,8 @@
             </a>
         </div>
 
+        <a href="./paginas-html/pagina-cadastro-artesao.php">link cadastro atesão</a>
+
         <!-- ---------------------------------------- sessão de imagens promocionais ---------------------------------------- -->
 
         <section class="sessao-imagens">
