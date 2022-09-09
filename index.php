@@ -45,12 +45,34 @@
                         <ul class="nav-links">
                             <li>
                                 <a href="#">Produtos</a>
+                                <ul class="links-sub-menu">
+                                    <li><a href="#">Pinceis</a></li>
+                                    <li><a href="#">Telas</a></li>
+                                    <li><a href="#">Tapetes</a></li>
+                                    <li><a href="#">Amigurumis</a></li>
+                                    <li><a href="#">MDFs</a></li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#">Materiais</a>
+                                <ul class="links-sub-menu">
+                                    <li><a href="#">Madeira</a></li>
+                                    <li><a href="#">Tintas</a></li>
+                                    <li><a href="#">Barbante</a></li>
+                                    <li><a href="#">Vernis</a></li>
+                                    <li><a href="#">Plástico</a></li>
+                                    <li><a href="#">MDF</a></li>
+                                    <li><a href="#">Argila</a></li>
+                                    <li><a href="#">Linhas</a></li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#">Marcas</a>
+                                <ul class="links-sub-menu">
+                                    <li><a href="#">Kalunga</a></li>
+                                    <li><a href="#">Acrilex</a></li>
+                                    <li><a href="#">Lepok</a></li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="#">Sobre</a>
@@ -97,7 +119,6 @@
             </a>
         </div>
 
-        <a href="./paginas-html/pagina-cadastro-artesao.php">link cadastro atesão</a>
 
         <!-- ---------------------------------------- sessão de imagens promocionais ---------------------------------------- -->
 
@@ -209,50 +230,50 @@
                 <div class="card-wraper swiper-wrapper">
                     <div class="card swiper-slide">
                         <div class="image-content"> <!-- tudo que estiver aqui dentro faz parte da imagem do card -->
-                            <span class="overlay"></span>
+                            <span class="overlay" style="background-color: black;"></span>
 
                             <div class="card-image">
-                                <img src="./imagens/profile1.jpg" alt="imagem 1" class="card-img">
+                                <img src="./imagens/kalunga.png" alt="imagem 1" class="card-img">
                             </div>
                         </div>
 
                         <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus autem in ducimus delectus dignissimos, ea </p>
+                            <h2 class="name">Kalunga</h2>
+                            <p class="description">Venha conferir os produtos que estão disponívies em parcerias com a kalunga</p>
 
-                            <button class="button">View More</button>
+                            <a href="#">Veja mais</a>
                         </div>
                     </div>
                     <div class="card swiper-slide">
                         <div class="image-content"> <!-- tudo que estiver aqui dentro faz parte da imagem do card -->
-                            <span class="overlay"></span>
+                            <span class="overlay" style="background-color: #00699F;"></span>
 
                             <div class="card-image">
-                                <img src="./imagens/profile2.jpg" alt="imagem 1" class="card-img">
+                                <img src="./imagens/lepok.png" alt="imagem 1" class="card-img">
                             </div>
                         </div>
 
                         <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus autem in ducimus delectus dignissimos, ea </p>
+                            <h2 class="name">Lepok</h2>
+                            <p class="description">Materiais escolares você encontra na Lepok</p>
 
-                            <button class="button">View More</button>
+                            <a href="#">Veja mais</a>
                         </div>
                     </div>
                     <div class="card swiper-slide">
                         <div class="image-content"> <!-- tudo que estiver aqui dentro faz parte da imagem do card -->
-                            <span class="overlay"></span>
+                            <span class="overlay" style="background-image: url('./imagens/fundo-acrilex.jpg'); object-fit: cover;"></span>
 
                             <div class="card-image">
-                                <img src="./imagens/profile3.jpg" alt="imagem 1" class="card-img">
+                                <img src="./imagens/acrilex.png" alt="imagem 1" class="card-img">
                             </div>
                         </div>
 
                         <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus autem in ducimus delectus dignissimos, ea </p>
+                            <h2 class="name">Acrilex</h2>
+                            <p class="description">Veja todo o nosso catálogo de tintas da Acrilex</p>
 
-                            <button class="button">View More</button>
+                            <a href="#">Veja mais</a>
                         </div>
                     </div>
                 </div>

@@ -63,7 +63,7 @@ header > .container {
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 /* logo do site */
@@ -146,7 +146,13 @@ header > .container {
 .header2 ul.nav-links {
     list-style: none;
     display: flex;
-    gap: 50px;
+    /* gap: 50px; */
+}
+
+.header2 ul.nav-links li {
+    position: relative;
+    width: 150px;
+    text-align: center;
 }
 
 .header2 ul.nav-links li a {
@@ -161,10 +167,40 @@ header > .container {
     opacity: .7;
 }
 
+.header2 ul.nav-links li .links-sub-menu {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    list-style: none;
+    z-index: 900;
+    background-color: var(--azul-escuro);
+    padding-top: 20px;
+    border-radius: 0 0 10px 10px;
+
+    display: none;
+    transition: all .4s ease;
+}
+
+.header2 ul.nav-links li:hover .links-sub-menu {
+    display: block;
+}
+
+.header2 ul.nav-links li .links-sub-menu li {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+.header2 ul.nav-links li .links-sub-menu li a {
+    color: white;
+    font-size: 18px;
+}
+
 /*------------------------------------------ formatação imagens slider imagens --------------------------------------------- */
 .carousel {
     margin: 50px auto;
-    width: 90%;
+    width: 95%;
     max-width: 1280px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 20px;
@@ -183,6 +219,8 @@ header > .container {
 .sessao-imagens {
     width: 100%;
     margin: 60px 0;
+    background-color: rgb(224, 222, 222);
+    padding: 40px 0;
 }
 
 .imagens-content {
@@ -205,9 +243,6 @@ header > .container {
     height: 100%;
     cursor: pointer;
 }
-/* .imagem-item:hover {
-    transform: scale(1.1);
-} */
 
 /* card azul na parte de baixo da imagem */
 .titulo-img {
@@ -300,7 +335,7 @@ section.produtos .produtos-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 13px;
     align-items: center;
     padding: 5px;
 }
@@ -385,6 +420,12 @@ section.produtos .produtos-container a:hover > .card-produto {
 
 /*------------------------------------------ slider de marcas --------------------------------------------- */
 
+section.carousel-marcas {
+    width: 100%;
+    padding: 40px 0;
+    background-color: rgb(224, 222, 222);
+}
+
 .slide-container {
     width: 100%;
     max-width: 1280px;
@@ -412,6 +453,19 @@ section.produtos .produtos-container a:hover > .card-produto {
     padding: 10px 14px;
 }
 
+/* o card que compreende todos os elementos como imagem e contúdo escrito */
+.card-content {
+    height: 200px;
+    position: relative;
+}
+
+.card-content h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.74);
+    margin: 10px 0 20px 0;
+}
+
 .image-content {
     position: relative; /* limita o overlay devido ao position absolulte que ele possui */
     row-gap: 5px; /* row-gap define o tamanho do intervalo da linha do objeto */
@@ -425,29 +479,32 @@ section.produtos .produtos-container a:hover > .card-produto {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: silver;
+    /* background-color: black; */
 
-    border-radius: 25px 25px 0 25px;
+    border-radius: 25px 25px 0 0;
 }
 
+/* --------------- os códigos abaixo servem para criar o efeito com borda do lado direito inferior da imagem do card de marcas --------------- */
+
 /* cria dois quadradinhos vazios para aplicar o efeito visto no canto inferior direito do card da imagem */
-/* cria um quadradinho para cada código, before e after */
+/* cria um quadradinho para cada código, before e after 
 .overlay::before,
 .overlay::after {
-    content: ''; /* responsável por criar os quadradinhos */
+    content: ''; /* responsável por criar os quadradinhos 
     position: absolute;
     right: 0;
     bottom: -40px;
     height: 40px;
     width: 40px;
-    background-color: silver;
+    background-color: blue;
 }
 
-/* pega o segundo quadradinho(que foi formado pelo .overlay::after) e deixa ele branco fazendo que apareça apenas o pontinha do quadradinho do before, deixando assim o efeito visto no caed */
+/* pega o segundo quadradinho(que foi formado pelo .overlay::after) e deixa ele branco fazendo que apareça apenas o pontinha do quadradinho do before, deixando assim o efeito visto no caed 
 .overlay::after {
-    border-radius: 0 25px 0 0;
+    border-radius: 0 20px 0 0;
     background-color: white;
 }
+*/
 
 /* div que limita o tamanho da imagem */
 .card-image {
@@ -455,8 +512,8 @@ section.produtos .produtos-container a:hover > .card-produto {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    /* padding: 3px;
-    background-color: white; */
+    padding: 3px;
+    background-color: white;
 }
 
 /* formata a imagem para caber dentro do elemento pai que é .card-image */
@@ -482,29 +539,35 @@ section.produtos .produtos-container a:hover > .card-produto {
     text-align: center;
 }
 
-.button {
-    border: none;
-    font-size: 16px;
+/* botão de veja mais dos cards de marcas */
+.card-wraper .card .card-content a {
     color: white;
-    padding: 8px 16px;
-    background-color: #4070F4;
-    border-radius: 6px;
-    margin: 14px;
-    cursor: pointer;
-    transition: all .3s ease;
-}
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: var(--azul-escuro);
+    border-radius: 10px;
 
-.button:hover {
-    background-color: #1951ec;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .4s ease;
+}
+.card-wraper .card .card-content a:hover {
+    text-decoration: none;
+    background-color: blue;
+    width: 150px;
 }
 
 .swiper-navBtn {
-    color: #6E93f7;
+    color: gray;
     transition: color 0.3s ease;
 }
 
 .swiper-navBtn:hover {
-    color: #4070F4;
+    color: blue;
 }
 
 .swiper-navBtn::before,
@@ -521,12 +584,12 @@ section.produtos .produtos-container a:hover > .card-produto {
 }
 
 .swiper-pagination-bullet {
-    background-color: #6E93f7;
+    background-color: #4070F4;
     opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #4070F4;
+    background-color: blue;
 }
 
 @media screen and (max-width: 768px) {
