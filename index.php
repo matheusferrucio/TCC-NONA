@@ -33,7 +33,7 @@
                             <nav class="nav-links">
                                 <a href="#"><i class="fa-solid fa-heart"></i></a>
 
-                                <a href="./paginas-html/pagina-produto.php"><i class="fa-solid fa-user"></i></a>
+                                <a href="./paginas-html/tela-login.php"><i class="fa-solid fa-user"></i></a>
 
                                 <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
 

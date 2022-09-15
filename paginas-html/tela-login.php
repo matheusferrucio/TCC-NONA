@@ -4,38 +4,38 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>NONA login</title>
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/media.css">
+        <title>Tela de login</title>
         <link rel="stylesheet" href="../css/tela-login.css">
+        <link rel="stylesheet" href="../css/style.css">
         <script src="https://kit.fontawesome.com/62e5760e2b.js" crossorigin="anonymous"></script>
+    </head>
     <body>
-        <header>
-            <div class="container flex">
-                <a href="../index.php">
-                    <h2 class="logo">NONA</h2>
-                </a>
-            </div><!--container-->
-        </header>
-
         <main>
-            <div class="container-formulario">
-                <h2>Login</h2>
-                <div class="formulario-login">
-                    <form action="login.php" method="post">
-                        <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email" placeholder="Digite seu email..."/>
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha..."/>
-                        <a href="#">Esqueceu a senha ?</a>
-                        <input type="submit" value="Entrar">
-                    </form>
-                </div><!--formulario-login-->
-            </div><!--container-formulario-->
-        </main>
+            <div class="login-container">
+                <h3>Faça login na sua conta</h3>      
+                <div class="formulario-content">
+                    <form action="login.php">
+                        <div class="input-item">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder="Digite seu e-mail..." require>
+                        </div>
+                        <div class="input-item">
+                            <label for="senha">Senha</label>
+                            <input type="password" name="senha" id="senha" placeholder="Digite a sua senha..." require>
+                        </div>
+                        <div class="senha-cadastro">
+                            <div class="esqueci-senha">
+                                <a href="esqueci-senha.php">Esqueci minha senha</a>
+                            </div>
 
-        <?php
-            include('footer.php');
-        ?>
+                            <div class="link-cadastro">
+                                <p>Ainda não possui uma conta? <a href="#">Cadastre-se</a></p>
+                            </div>
+                        </div>
+                        <input type="submit" value="Fazer login">  
+                    </form>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
