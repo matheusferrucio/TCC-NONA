@@ -199,6 +199,10 @@ section.cadastro-atelie {
     background-color: #011955;
 }
 
+footer a {
+    text-decoration: none;
+}
+
 @media screen and (max-width: 1030px){
     .sessao-form .cep {
         width: 50%;

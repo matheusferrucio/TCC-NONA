@@ -33,5 +33,9 @@
                 </div><!--formulario-login-->
             </div><!--container-formulario-->
         </main>
+
+        <?php
+            include('footer.php');
+        ?>
     </body>
 </html>

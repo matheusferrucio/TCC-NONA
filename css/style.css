@@ -605,6 +605,52 @@ section.carousel-marcas {
     }
 }
 
+/*---------------------------------------------------- footer ------------------------------------------------------- */
+footer {
+    width: 100%;
+    background-color: var(--azul-escuro);
+    margin-top: 100px;
+}
+
+.footer-content {
+    width: 100%;
+}
+.footer-content .saiba-mais {
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.footer-content .saiba-mais p {
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.footer-content .links-footer-content {
+    width: 100%;
+}
+.footer-content .links-footer-content .lista-links-footer {
+    padding: 50px 0;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.footer-content .links-footer-content .lista-links-footer li a {
+    color: white;
+    font-size: 19px;
+    transition: all .3s ease;
+}
+.footer-content .links-footer-content .lista-links-footer li a:hover {
+    opacity: .6;
+    text-decoration: none;
+}
+
 /*---------------------------------------------------- responsivo ------------------------------------------------------- */
 @media screen and (max-width: 1024px){
     .imagens-content {

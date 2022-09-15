@@ -172,3 +172,7 @@ main section.container {
     transform: scale(1.1);
     background-color: #011955;
 }
+
+footer a {
+    text-decoration: none;
+}

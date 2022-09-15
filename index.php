@@ -118,7 +118,8 @@
                 <span class="sr-only">Próximo</span>
             </a>
         </div>
-
+        
+        <a href="./paginas-html/pagina-cadastro-atelie.php">asnvkagioi</a>
 
         <!-- ---------------------------------------- sessão de imagens promocionais ---------------------------------------- -->
 
@@ -284,6 +285,13 @@
             <div class="swiper-pagination"></div>
         </div>
             </div>    
+        </section>
+
+
+        <section class="footer-site">
+            <?php
+                include('./paginas-html/footer.php');
+            ?>
         </section>
 
         <!-- scripts do bootstrap -->

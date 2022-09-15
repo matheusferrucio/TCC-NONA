@@ -219,26 +219,8 @@
                 </div>
             </section>
 
-            <footer>
-                <div class="container">
-                    <div class="saiba-mais">
-                        <p>Saiba-mais</p>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <nav>
-                        <ul class="links-footer">
-                            <li>
-                                <a href="#">| Central de ajuda |</a>
-                            </li>
-                            <li>
-                                <a href="#">| Minha conta |</a>
-                            </li>
-                            <li>
-                                <a href="#">| Seja parceiro |</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </footer>
+            <?php
+                include('footer.php');
+            ?>
         </body>
     </html>

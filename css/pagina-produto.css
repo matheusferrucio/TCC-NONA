@@ -18,7 +18,7 @@ section.visualizar-produto {
 }
 
 .container-produto {
-  width: 1280px;
+  width: 100%;
   background-color: white;
   border-radius: 10px;
   display: flex;
@@ -647,48 +647,6 @@ section.sessao-comentario {
   padding: 10px;
 }
 
-/* formatação do footer */
-footer {
-  position: relative;
-  width: 100%;
-  background-color: var(--azul-escuro);
-  padding: 80px 0 50px 0;
-}
-
-/* botão de saiba mais do footer */
-.saiba-mais {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 230px;
-  background-color: white;
-  border-radius: 0 0 10px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  color: rgb(78, 78, 78);
-  padding: 10px 0;
-  cursor: pointer;
-}
-
-nav .links-footer {
-  width: 100%;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-nav .links-footer li a {
-  color: white;
+footer a {
   text-decoration: none;
-  font-size: 18px;
-  transition: all .3s ease;
-}
-nav .links-footer li a:hover {
-  opacity: .7;
 }
