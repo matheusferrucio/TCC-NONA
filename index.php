@@ -31,9 +31,9 @@
                         </div>
                         <div class="botoes-menu">
                             <nav class="nav-links">
-                                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                                <a href="paginas-html/pagina-favoritos.php"><i class="fa-solid fa-heart"></i></a>
 
-                                <a href="./paginas-html/tela-login.php"><i class="fa-solid fa-user"></i></a>
+                                <a href="./paginas-html/pagina-perfil.php"><i class="fa-solid fa-user"></i></a>
 
                                 <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
 
@@ -119,8 +119,6 @@
             </a>
         </div>
         
-        <a href="./paginas-html/pagina-cadastro-atelie.php">asnvkagioi</a>
-
         <!-- ---------------------------------------- sessão de imagens promocionais ---------------------------------------- -->
 
         <section class="sessao-imagens">
@@ -134,7 +132,7 @@
                         <div class="efeito-hover-img">
                             <h3>Veja nossos amigurumis</h3>
                             <p>Temos todo tipo de amigurumi, clique no botão abaixo para conferir</p>
-                            <a href="#">Ver produtos</a>
+                            <a href="paginas-html/pagina-visualizar-todos-produtos.php">Ver produtos</a>
                         </div>
                     </div>
 
@@ -146,7 +144,7 @@
                         <div class="efeito-hover-img">
                             <h3>Veja nossas artes em MDF</h3>
                             <p>Temos todo tipo de arte em MDF, produto de qualidade e beleza excelentes</p>
-                            <a href="#">Ver produtos</a>
+                            <a href="paginas-html/pagina-visualizar-todos-produtos.php">Ver produtos</a>
                         </div>
                     </div>
 
@@ -158,7 +156,7 @@
                         <div class="efeito-hover-img">
                             <h3>Pinceis para pintura</h3>
                             <p>Todo tipo de pincel para pintura para que você possa dar vida a sua arte!</p>
-                            <a href="#">Ver produtos</a>
+                            <a href="paginas-html/pagina-visualizar-todos-produtos.php">Ver produtos</a>
                         </div>
                     </div>
                 </div>
@@ -171,55 +169,33 @@
                     <?php
                         for ($i = 0; $i < 12; $i++){
                             echo "<a href='./paginas-html/pagina-produto.php'>
-                            <div class='card-produto'>
-                                <div class='img-produto'>
-                                    <img src='./imagens/tapete-de-vo.jpg' alt='imagem do produto'>
-                                </div>
-                                <div class='produto-conteudo'>
-                                    <div class='descricao-produto'>
-                                        <p>Produto muito bom, parece os falsificados da china</p>
+                                    <div class='card-produto'>
+                                        <div class='img-produto'>
+                                            <img src='./imagens/tapete-de-vo.jpg' alt='imagem do produto'>
+                                        </div>
+                                        <div class='produto-conteudo'>
+                                            <div class='descricao-produto'>
+                                                <p>Produto muito bom, parece os falsificados da china</p>
+                                            </div>
+                                            <div class='avaliacao-card-produto'>
+                                                <i class='fa-solid fa-star'></i>
+                                                <i class='fa-solid fa-star'></i>
+                                                <i class='fa-solid fa-star'></i>
+                                                <i class='fa-solid fa-star'></i>
+                                                <i class='fa-solid fa-star'></i>
+                                            </div>
+                                            <div class='preco-produto'>
+                                                <span>De: R$ 190,00</span>
+                                                <span>Por: R$ 150,00</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class='avaliacao-card-produto'>
-                                        <i class='fa-solid fa-star'></i>
-                                        <i class='fa-solid fa-star'></i>
-                                        <i class='fa-solid fa-star'></i>
-                                        <i class='fa-solid fa-star'></i>
-                                        <i class='fa-solid fa-star'></i>
-                                    </div>
-                                    <div class='preco-produto'>
-                                        <span>De: R$ 190,00</span>
-                                        <span>Por: R$ 150,00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>";
+                                </a>";
                         }
                     ?>
-                    <!--
-                        CÓDIGO USADO PARA TESTAR O CARD COM O LINK PARA A PAGINA DE PRODUTO    
-                    <a href="./paginas-html/pagina-produto.php">
-                        <div class="card-produto">
-                            <div class="img-produto">
-                                <img src="./imagens/tapete-de-vo.jpg" alt="imagem do produto">
-                            </div>
-                            <div class="produto-conteudo">
-                                <div class="descricao-produto">
-                                    <p>Produto muito bom, parece os falsificados da china</p>
-                                </div>
-                                <div class="avaliacao-card-produto">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <div class="preco-produto">
-                                    <span>De: R$ 190,00</span>
-                                    <span>Por: R$ 150,00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a> -->
+                    <div class="visualizar-produtos">
+                        <a href="paginas-html/pagina-visualizar-todos-produtos.php">Visualizar mais produtos</a>
+                    </div>
                 </div>
             </div>
         </section>

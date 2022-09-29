@@ -1,0 +1,13 @@
+:root {
+    --azul-escuro: #002074;
+    --azul-intermediario: rgb(18, 18, 233);
+    --azul-claro: rgb(39, 39, 243);
+    --cor-texto: rgb(75, 73, 73);
+    --cinza-claro: rgb(235, 231, 231);
+}
+
+section.produtos h1 {
+    color: var(--cor-texto);
+    font-size: 2em;
+    padding-left: 20px;
+}

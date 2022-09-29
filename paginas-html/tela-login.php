@@ -29,7 +29,7 @@
                             </div>
 
                             <div class="link-cadastro">
-                                <p>Ainda não possui uma conta? <a href="#">Cadastre-se</a></p>
+                                <p>Ainda não possui uma conta? <a href="pagina-cadastro.php">Cadastre-se</a></p>
                             </div>
                         </div>
                         <input type="submit" value="Fazer login">  

@@ -20,7 +20,10 @@ body {
 /* cores usadas no site */
 :root {
     --azul-escuro: #002074;
+    --azul-intermediario: rgb(18, 18, 233);
+    --azul-claro: rgb(39, 39, 243);
     --cor-texto: rgb(75, 73, 73);
+    --cinza-claro: rgb(235, 231, 231);
 }
 
 /* divs que serão mais usadas */
@@ -43,7 +46,9 @@ body {
 
 /* formatação do header */
 header {
-    /* position: fixed; */
+    /* position: sticky; */
+    top: 0;
+    z-index: 999;
     width: 100%;
     height: 150px;
     background-color: #002074;
@@ -111,7 +116,7 @@ header > .container {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     font-size: 32px;
     color: white;
 }
@@ -199,7 +204,7 @@ header > .container {
 
 /*------------------------------------------ formatação imagens slider imagens --------------------------------------------- */
 .carousel {
-    margin: 50px auto;
+    margin: 60px auto;
     width: 95%;
     max-width: 1280px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -258,7 +263,7 @@ header > .container {
     text-align: center;
     border-radius: 10px 10px 0 0;
     cursor: pointer;
-    z-index: 999;
+    z-index: 900;
 }
 
 /* efeito hover com conteúdo e botão */
@@ -361,6 +366,7 @@ section.produtos .produtos-container a:hover > .card-produto {
     padding: 10px;
     margin-bottom: 8px;
     transition: all .2s ease;
+    border-radius: 10px;
 }
 
 /* div que contém a imagem */
@@ -416,6 +422,28 @@ section.produtos .produtos-container a:hover > .card-produto {
 .card-produto .produto-conteudo .preco-produto span:last-of-type {
     color: var(--cor-texto);
     font-size: 20px;
+}
+
+.visualizar-produtos {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visualizar-produtos a {
+    padding: 15px 25px;
+    background-color: var(--azul-escuro);
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    transition: all .4s ease;
+}
+
+.visualizar-produtos a:hover {
+    background-color: var(--azul-intermediario);
+    transform: scale(1.02);
 }
 
 /*------------------------------------------ slider de marcas --------------------------------------------- */

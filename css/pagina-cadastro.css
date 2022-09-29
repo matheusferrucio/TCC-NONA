@@ -3,24 +3,45 @@
     --cor-texto: rgb(60, 60, 60);
 }
 
-header {
-    height: 200px;
-}
-
-header .container .container-logo {
-    width: auto;
-    height: calc(100% - 50px);
-}
-
 body {
     background-color: var(--cinza-claro);
     overflow-y: scroll;
 }
 
+header {
+    height: 200px;
+}
+
+header .header1,
+header .header2 {
+    display: none;
+    pointer-events: none;
+}
+
+header .container {
+    position: relative;
+}
+
+/* container que contém a logo */
+.container .container-logo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* logo do header */
+.container .container-logo .logo {
+    margin-top: 15px;
+}
+
 main {
     position: relative;
     width: 100%;
-    height: 130vh;
+    height: 115vh;
 }
 
 /* container que contém o formulário de cadastro */
@@ -171,6 +192,10 @@ main section.container {
 .botao-cadastrar input[type=submit]:hover {
     transform: scale(1.1);
     background-color: #011955;
+}
+
+footer {
+    margin-top: 0;
 }
 
 footer a {
