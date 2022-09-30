@@ -12,44 +12,60 @@
     </head>
     <body>
         <?php
-            include('header-site.php');
+            // include('header-site.php');
         ?>
 
         <main>
             <div class="container">
-                <div class="foto-perfil">
-                    <img src="../imagens/profile1.jpg" alt="">
-                </div>
-                <div class="perfil-content">
-                    <div class="info-item">
-                        <p>NOME: </p>
-                        <P>Matheus da Cruz Ferrucio</P>
+                <div class="container-foto">
+                    <div class="quadrado q1"></div>
+                    <div class="quadrado q2"></div>
+                    <div class="quadrado3">
+                        <div class="quadrado q1"></div>
+                        <div class="quadrado q2"></div>
                     </div>
-                    <div class="info-item">
-                        <p>Telefone: </p>
-                        <p>(18) 99999-9999</p>
-                    </div>
-                    <div class="info-item">
-                        <p>Endereço:</p>
-                        <p>Rua: quincas borba</p>
-                        <p>Bairro: jardim das Oliveiras</p>
-                        <p>Cidade: Araçatuba</p>
-                        <p>Número: 1000</p>
-                    </div>
-                    <div class="info-item">
-                        <p>CPF:</p>
-                        <p>999.999.999-99</p>
-                    </div>
-                    <div class="info-item">
-                        <p>RG:</p>
-                        <p>33-333-333-3</p>
-                    </div>
+                   <div class="w35">
+                        <div class="foto-perfil">
+                            <img src="../imagens/foto-perfil.jpg" alt="">
+                        </div>
+                   </div>
+                   <div class="w65">
+                        <div class="info-item">
+                            <p>NOME :</p>
+                            <p>Matheus da Cruz Ferrucio</p>
+                        </div>
+                        <div class="info-item">
+                            <p>E-MAIL :</p>
+                            <p>meuemail@gmail.com</p>
+                        </div>
+                        <div class="info-item">
+                            <p>TELEFONE :</p>
+                            <p>(99) 99999-9999</p>
+                        </div>
+                        <div class="info-item endereco">
+                            <p>ENDEREÇO :</p>
+                            <p>BAIRRO : Beco da Fonte</p>
+                            <p>RUA : Tchurosbango Tchurosbago</p>
+                            <p>NÚMERO : 101</p>
+                        </div>
+                        <div class="info-item">
+                            <p>CPF :</p>
+                            <p>222.222.222.22</p>
+                        </div>
+                        <div class="info-item">
+                            <p>RG :</p>
+                            <p>22 222 222-22</p>
+                        </div>
+                        <div class="info-item">
+                            <a href="../index.php"><i class="fa-solid fa-house"></i>VOLTAR PARA PÁGINA PRINCIPAL</a>
+                        </div>
+                   </div><!-- w65 -->
                 </div>
             </div>
         </main>
 
         <?php
-            include('footer.php');
+            // include('footer.php');
         ?>
     </body>
 </html>

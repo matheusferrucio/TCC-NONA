@@ -1,5 +1,7 @@
 :root {
     --azul-escuro: #002074;
+    --azul-escuro2: #042a8a;
+    --azul-escuro3: #021a5a;
     --azul-intermediario: rgb(18, 18, 233);
     --azul-claro: rgb(39, 39, 243);
     --cor-texto: rgb(75, 73, 73);
@@ -7,38 +9,144 @@
 }
 
 main .container {
-    border-radius: 10px;
-    box-shadow: 0 0 6px silver;
-    margin-top: 50px;
-    border: 1px solid silver;
+    min-width: 100%;
+    height: 100vh;
+    background-color: white;
 }
 
-main .container .foto-perfil {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    margin: 30px auto;
-    box-shadow: -8px -8px var(--azul-escuro);
-}
-
-main .container .foto-perfil img {
+/* contexto geral que contém a imagem de perfil e o fundo */
+main .container .container-foto {
     width: 100%;
-    height: 100%;
+    /* height: 300px; */
+    height: 100vh;
+    background-color: var(--azul-escuro);
+    
+    position: relative;
+    display: flex;
+}
+
+/* div para delimitar cada div para aplicar a borda, como eu precisava de duas bordas com o mesmo ângulo eu precisei criar uma div para cada borda */
+main .container .container-foto .quadrado {
+    width: 50%;
+    /* height: 300px; */
+    height: 100vh;
+}
+
+/* bordas laterais mais claras */
+main .container .container-foto .q1 {
+    /* border-bottom: 300px solid transparent;
+    border-left: 180px solid var(--azul-escuro2); */
+    border-bottom: 100vh solid transparent;
+    border-left: 250px solid var(--azul-escuro2);
+}
+main .container .container-foto .q2 {
+    /* border-top: 300px solid transparent;
+    border-right: 180px solid var(--azul-escuro2); */
+    border-top: 100vh solid transparent;
+    border-right: 250px solid var(--azul-escuro2);
+}
+
+/* trapézio mais escuro do centro */
+main .container .container-foto .quadrado3 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    /* height: 300px; */
+    height: 100vh;
+    background-color: var(--azul-escuro3);
+    display: flex;
+}
+
+/* bordas do trapézio do meio */
+main .container .container-foto .quadrado3 .q1 {
+    /* border-left: 180px solid var(--azul-escuro); */
+    border-left: 250px solid var(--azul-escuro);
+}
+main .container .container-foto .quadrado3 .q2 {
+    /* border-right: 180px solid var(--azul-escuro); */
+    border-right: 250px solid var(--azul-escuro);
+}
+/* boot-css */
+.container .w35 {
+    width: 35%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* container da foto de perfil */
+.container .w35 .foto-perfil {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+/* imagem de perfil */
+.container .w35 .foto-perfil img {
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid white;
-    box-shadow: 5px 7px var(--azul-intermediario);
+    padding: 5px;
+    background-color: var(--azul-escuro2);
+    border: 3px solid white;
 }
 
-.info-item {
-    width: 100%;
-    padding: 8px 2%;
+/* boot-css */
+.container .w65 {
+    width: 65%;
+    height: 100vh;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
     display: flex;
-    color: var(--cor-texto);
-    font-size: 1.1em;
+    flex-direction: column;
+    justify-content: center;
 }
-.info-item p:first-of-type {
-    width: 10%;
-    color: var(--cor-texto);
-    font-weight: 600;
+
+.container .w65 .info-item {
+    width: 100%;
+    display: flex;
+    
+    color: white;
+    font-size: 1em;
+    margin: 10px 0;
+}
+.container .w65 .info-item p:first-of-type {
+    width: 20%;
+}
+
+.container .w65 .endereco {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .w65 .endereco p:not(:first-of-type) {
+    margin-right: 10px;
+}
+
+.info-item:last-of-type a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 15px;
+
+    position: relative;
+    left: -10px;
+
+    margin-top: 30px;
+    border-radius: 10px;
+    transition: all .4s ease;
+}
+
+.info-item:last-of-type a:hover {
+    background-color: rgba(255, 255, 255, 0.226);
 }
